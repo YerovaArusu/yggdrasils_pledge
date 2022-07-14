@@ -1,0 +1,12 @@
+{
+  "type": "yggdrasils_pledge:yggdrasil_tree",
+  "config": {
+    "start_pool": "yggdrasils_pledge:yggdrasil_tree/start_pool",
+    "size": 4
+  },
+
+  "biomes": "#yggdrasils_pledge:has_structure/yggdrasil_tree",
+  "adapt_noise": true,
+  "spawn_overrides": {
+  }
+}
