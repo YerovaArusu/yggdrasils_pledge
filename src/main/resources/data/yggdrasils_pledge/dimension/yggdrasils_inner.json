@@ -1,0 +1,12 @@
+{
+  "type": "yggdrasils_pledge:yggdrasils_inner",
+  "generator": {
+    "type": "yggdrasils_pledge:yggdrasils_inner_chunkgen",
+    "seed": 0,
+    "settings": {
+      "base": 65,
+      "verticalvariance": 10,
+      "horizontalvariance": 10
+    }
+  }
+}
