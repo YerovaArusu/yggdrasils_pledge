@@ -9,8 +9,7 @@ import yerova.yggdrasilsplegde.YggdrasilsPlegde;
 import yerova.yggdrasilsplegde.core.ClientServerCommunication;
 import yerova.yggdrasilsplegde.core.abilities.AbilityManager;
 import yerova.yggdrasilsplegde.core.abilities.AbilitySkills;
-import yerova.yggdrasilsplegde.core.gui.abilitygui.abilitymenu.AbilityMainMenu;
-import yerova.yggdrasilsplegde.core.gui.abilitygui.abilitymenu.OPenGUI;
+import yerova.yggdrasilsplegde.core.gui.abilitygui.abilitymenu.OpenGUI;
 import yerova.yggdrasilsplegde.core.keybindings.KeyBindsInit;
 
 @Mod.EventBusSubscriber(modid = YggdrasilsPlegde.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE, value = Dist.CLIENT)
@@ -51,7 +50,7 @@ public class InputEvents{
 
             //open ability menu
             if (KeyBindsInit.openAbilityMenu.isDown()) {
-                Thread thread = new Thread(new OPenGUI());
+                Thread thread = new Thread(new OpenGUI());
                 thread.start();
             }
         }
@@ -67,5 +66,7 @@ public class InputEvents{
         }
 
     }
+
+
 
 }

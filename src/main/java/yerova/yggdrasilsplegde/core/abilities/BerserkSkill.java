@@ -16,6 +16,7 @@ import yerova.yggdrasilsplegde.core.gui.abilitygui.abilitymenu.button.UniversalB
 
 public class BerserkSkill implements Runnable {
 
+    public static final int getID = 2;
     private ServerPlayer player;
 
     public BerserkSkill(ServerPlayer player) {
@@ -96,7 +97,7 @@ public class BerserkSkill implements Runnable {
     public static void onAbilitySet(Button button) {
         if (button instanceof UniversalButton) {
             Minecraft.getInstance().player.sendMessage(new TextComponent("Berserk set."), Minecraft.getInstance().player.getUUID());
-            AbilitySkills.setSkill(AbilitySkills.BERSERK_SKILL);
+            AbilitySkills.setSkill(AbilityInit.ABILITIES.get(1).getID());
         }
     }
 }

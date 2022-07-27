@@ -10,6 +10,7 @@ import yerova.yggdrasilsplegde.core.gui.abilitygui.abilitymenu.button.UniversalB
 
 public class FireballAbility implements Runnable {
 
+    public static final int getID = 3;
     private ServerPlayer player;
     public static final int ID = 3;
 

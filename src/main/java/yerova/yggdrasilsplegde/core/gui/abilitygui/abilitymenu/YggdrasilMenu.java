@@ -6,10 +6,7 @@ import net.minecraft.client.renderer.entity.ItemRenderer;
 import net.minecraft.network.chat.TextComponent;
 import net.minecraft.resources.ResourceLocation;
 import yerova.yggdrasilsplegde.YggdrasilsPlegde;
-import yerova.yggdrasilsplegde.core.abilities.AbilitySkills;
-import yerova.yggdrasilsplegde.core.abilities.BerserkSkill;
-import yerova.yggdrasilsplegde.core.abilities.FireballAbility;
-import yerova.yggdrasilsplegde.core.abilities.FullSerenitySkill;
+import yerova.yggdrasilsplegde.core.abilities.*;
 import yerova.yggdrasilsplegde.core.gui.abilitygui.abilitymenu.button.UniversalButton;
 
 public class YggdrasilMenu extends ModdedScreen {
@@ -30,14 +27,20 @@ public class YggdrasilMenu extends ModdedScreen {
         bookRight = width / 2 + FULL_WIDTH / 2;
         bookBottom = height / 2 + FULL_HEIGHT / 2;
 
-        this.addRenderableWidget(new UniversalButton(this, bookLeft + (FULL_WIDTH /4) * 3, bookTop + FULL_HEIGHT / 2, 64, 64,
+/*
+        this.addRenderableWidget(new UniversalButton(this, bookLeft + (FULL_WIDTH /4) * 3, bookTop + FULL_HEIGHT / 2, 32, 32,
                 new ResourceLocation(YggdrasilsPlegde.MOD_ID, "textures/gui/zetsuen_icon.png"), FullSerenitySkill::onAbilitySet));
 
-        this.addRenderableWidget(new UniversalButton(this, bookLeft + FULL_WIDTH / 4, bookTop + FULL_HEIGHT / 2, 64, 64,
+        this.addRenderableWidget(new UniversalButton(this, bookLeft + FULL_WIDTH / 4, bookTop + FULL_HEIGHT / 2, 32, 32,
                 new ResourceLocation(YggdrasilsPlegde.MOD_ID, "textures/gui/kabbalah_icon.png"), BerserkSkill::onAbilitySet));
 
-        this.addRenderableWidget(new UniversalButton(this, bookLeft + FULL_WIDTH / 4, bookTop + (FULL_HEIGHT / 4) * 3 , 64, 64,
+        this.addRenderableWidget(new UniversalButton(this, bookLeft + FULL_WIDTH / 4, bookTop + (FULL_HEIGHT / 4) * 3 , 32, 32,
                 new ResourceLocation(YggdrasilsPlegde.MOD_ID, "textures/gui/fireball-ability.png"), FireballAbility::onAbilitySet));
+*/
+
+        for(Ability ability: AbilityInit.ABILITIES) {
+            this.addRenderableWidget(ability.getUniversalButton(this,  bookLeft, bookTop));
+        }
 
         super.init();
 

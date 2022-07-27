@@ -14,6 +14,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 import software.bernie.geckolib3.GeckoLib;
 import yerova.yggdrasilsplegde.core.ClientServerCommunication;
+import yerova.yggdrasilsplegde.core.abilities.AbilityInit;
 import yerova.yggdrasilsplegde.core.blocks.BlockInit;
 import yerova.yggdrasilsplegde.core.datagen.DataGenerators;
 import yerova.yggdrasilsplegde.core.entities.EntityInit;
@@ -42,7 +43,7 @@ public class YggdrasilsPlegde {
         EntityInit.ENTITY.register(bus);
         BlockInit.BLOCKS.register(bus);
         StructureInit.STRUCTURES.register(bus);
-        //EntityInit.register(bus);
+
 
 
 
@@ -55,6 +56,7 @@ public class YggdrasilsPlegde {
         eventBus.addListener(ReiryokuEvents::onPlayerCloned);
         eventBus.addListener(ReiryokuEvents::onRegisterCapabilities);
         eventBus.addListener(ReiryokuEvents::onWorldTick);
+        eventBus.addListener(ReiryokuEvents::checkYggdrasilItems);
 
 
 
@@ -79,5 +81,6 @@ public class YggdrasilsPlegde {
     public void CommonSetup(FMLCommonSetupEvent event) {
         DimensionInit.register();
         ClientServerCommunication.register();
+        AbilityInit.register();
     }
 }

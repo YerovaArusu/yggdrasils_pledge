@@ -14,6 +14,7 @@ import yerova.yggdrasilsplegde.core.gui.abilitygui.abilitymenu.button.UniversalB
 
 public class FullSerenitySkill implements Runnable {
 
+    public static final int getID = 1;
     private ServerPlayer player;
     public FullSerenitySkill(ServerPlayer player) {
         this.player = player;

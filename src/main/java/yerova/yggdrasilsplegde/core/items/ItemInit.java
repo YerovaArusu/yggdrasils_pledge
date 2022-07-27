@@ -37,6 +37,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import yerova.yggdrasilsplegde.core.items.weapons.YggdZephyr;
 
 public class ItemInit {
 
@@ -46,7 +47,10 @@ public class ItemInit {
             () -> new YggdrafoliumPickaxe(ModToolAndWeaponTiers.YGGDRAFOLIUM, 8, 1f, new Item.Properties().tab(CreativeModeTab.TAB_TOOLS)));
 
     public static final RegistryObject<Item> YGGD_RAMUS = ITEMS.register("yggd_ramus", () -> new YggdRamus(
-            new Item.Properties().tab(CreativeModeTab.TAB_TOOLS).fireResistant().rarity(Rarity.create("Unique", ChatFormatting.AQUA)).stacksTo(1)));
+            new Item.Properties().tab(CreativeModeTab.TAB_COMBAT).fireResistant().rarity(Rarity.create("Unique", ChatFormatting.AQUA)).stacksTo(1)));
+
+    public static final RegistryObject<Item> YGGD_ZEPHYR = ITEMS.register("yggd_zephyr", () -> new YggdZephyr(
+            new Item.Properties().tab(CreativeModeTab.TAB_COMBAT).fireResistant().rarity(Rarity.create("Unique", ChatFormatting.AQUA)).stacksTo(1)));
 
     public static final RegistryObject<Item> PORTAL_ITEM = fromBlock(BlockInit.PORTAL_BLOCK);
 
